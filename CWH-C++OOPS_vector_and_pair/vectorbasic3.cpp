@@ -1,0 +1,34 @@
+#include<iostream>//how to use itterator and insert
+#include<vector>
+using namespace std;  
+void vectordisplay(vector<int> &v) ;                                                                        
+int main()
+{  /////////what learned in prev files
+    vector<int> v;//vector is a dynamic array where you can increase or decrease size ie no need to specify the size of the array
+                  //beforehand
+                  //push_back is used to input in arrays .it keeps the value at the end of the array
+                  //like arrays the index starts from 0
+     vector<int> v1;
+
+    for(int i=0;i<5;i++)//instead of u call also use v.size()
+    {   int ele;
+        cin>>ele;
+        v1.push_back(ele);
+       // cout<<v1[i]<<endl;
+    }
+    cout<<"############"<<endl;
+    vectordisplay(v1);
+    ////////////what learned in prev files
+    vector<int> :: iterator iter = v1.begin();//always remember that iter is a pointer which points to the first element when you use begin()
+    v1.insert(iter,566);                      //iter is a pointer which points to the last element when you use end()
+    vectordisplay(v1);                        //you can use normal pointer arithmetic as well as use*iter to get access to the stored element in the pointer
+}
+    void vectordisplay(vector<int> &v)
+{
+    for (int i = 0; i < v.size(); i++)
+    {
+        /* code */
+        cout<<v[i]<<endl;
+    }
+    
+}
