@@ -23,10 +23,7 @@ void sieveofero(int a)
               arr[j]=1;
              }
          }
-     }
-   for(int i=2;i<=a;i++)
-  {
-     if(arr[i]==0)
+      if(arr[i]==0)
      {
          cout<<(i)<<" ";
      }
